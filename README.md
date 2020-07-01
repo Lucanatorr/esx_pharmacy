@@ -1,84 +1,43 @@
-# esx_compolice
+# esx_pharmacy
 
-Commmunity Police script designed for ESX servers.
+Pharmacy script designed for ESX servers.
 
 
 ## How to use
 
 1. Configure values in the config.lua file
 
-2. Go to 'esx_policejob' and add this to the __resource.lua/fxmanifest at the bottom:
-```lua
- exports {
-	'OpenPoliceActionsMenu',
-	'OpenIdentityCardMenu',
-	'OpenBodySearchMenu',
-	'ShowPlayerLicense',
-	'OpenUnpaidBillsMenu',
-	'LookupVehicle',
-	'OpenVehicleInfosMenu',
-	'ImpoundVehicle',
-	'createBlip'
-}
-```
-
-3. Navigate to 'esx_policejob/server/main.lua' **(this is very important)**
-  	Anywhere you see:
-  ```lua
-  	if xPlayer.job.name == 'police'
-  ```
-  	Add the following: 
-  ```lua
-  	if xPlayer.job.name == 'police' or if xPlayer.job.name == 'compolice' then
-  ```
-
-4. Navigate to 'esx_policejob/client/main.lua' **(this is also very important)**
-  	Anywhere you see:
-  ```lua
-  	if ESX.PlayerData.job and ESX.PlayerData.job.name == 'police'
-  ```
-  	Add the following: 
-  ```lua
-  	if ESX.PlayerData.job and ESX.PlayerData.job.name == 'police' or ESX.PlayerData.job.name == 'compolice' then
-  ```
+2. Start and enjoy!
   
 
 *Feel free to edit the resource but make sure to pass it through and give me credits*
 *If you edit and want to release on the forums/github message me first*
 
-Credit:
-The police menu code and blips is from:
-https://github.com/ESX-Org/esx_policejob
-
 ## Requirements
 - es_extended (https://github.com/ESX-Org/es_extended)
-- gcphone (https://github.com/N3MTV/gcphone) **(or any other phone script)**
-- esx_policejob (https://github.com/ESX-Org/esx_policejob)
-- mythic_progressbar (https://github.com/XxFri3ndlyxX/mythic_progressbar)
 
 ## Download & Installation
 
 ### Using [fvm](https://github.com/qlaffont/fvm-installer)
 ```
-fvm install --save --folder=esx Lucanatorr/esx_compolice
+fvm install --save --folder=esx Lucanatorr/esx_pharmacy
 ```
 
 ### Using Git
 ```
 cd resources
-git clone https://github.com/Lucanatorr/esx_compolice [esx]/esx_compolice
+git clone https://github.com/Lucanatorr/esx_compolice [esx]/esx_pharmacy
 ```
 
 ### Manually
-- Download https://github.com/Lucanatorr/esx_compolice/archive/master.zip
+- Download https://github.com/Lucanatorr/esx_pharmacy/archive/master.zip
 - Put it in the `[esx]` directory
 
 ## Installation
-- Import `job.sql` in your database
 - Add this in your `server.cfg`:
 
 ```
-start esx_compolice
+start esx_pharmacy
 ```
 
 
